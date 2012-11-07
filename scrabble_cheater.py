@@ -52,7 +52,7 @@ def generate_possible_words(word_list, tiles_input, board_letter):
 	possible_words.sort(key=lambda x: x[1], reverse=True)
 	return possible_words
 
-@cheater.route('/main_page', methods=['GET','POST'])
+@cheater.route('/', methods=['GET','POST'])
 def main_page():
 	if request.method == 'GET':
 		return render_template('main_page.html', error1 = "", error2 = "")
