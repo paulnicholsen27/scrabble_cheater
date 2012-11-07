@@ -1,3 +1,2 @@
 web: python scrabble_cheater.py
 
-# we are screwing this up on purpose
