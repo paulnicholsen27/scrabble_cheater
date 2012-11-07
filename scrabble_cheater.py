@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, redirect
 cheater = Flask(__name__)
 
@@ -75,4 +76,5 @@ def main_page():
 			return render_template('results.html', results=results)
 
 if __name__ == '__main__':
-	cheater.run(debug=True)
+	port = int(os.environ.get('PORT', 5000))
+	cheater.run(host='0.0.0.0', port=port)
