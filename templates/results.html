@@ -1,0 +1,29 @@
+<!doctype html>
+<title>Results</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Your top-scoring words are:</h1>
+
+  <div class=metanav>
+    {% for word in results[:15] %}
+      <ul class=entries>
+    	<li>{{word[0]}} - {{word[1]}} </li>
+        </ul>
+    {% endfor %}
+
+    {% if results!=[]: %}
+
+    <h4>
+      I hope you're proud of yourself.  Cheater.
+    </h4>
+     {% endif %}
+
+    {% if results ==[] %}
+    	There are no words that can be made with your letters.  <br>
+    	Try using a letter from the board. </br>
+    {% endif %}
+
+  </div>
+  	<div id=tagline>Created by <a href="www.github.com/pnichols104">Paul Nichols</a> while a student at <a href="https://www.hackerschool.com/">Hacker School</a></div>
+
+</div>

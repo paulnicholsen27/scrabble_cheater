@@ -1,0 +1,32 @@
+<!doctype html>
+<title>Scrabble cheater</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+<div class = page>
+	<h1>Scrabble Cheater</h1>
+
+	<div class=metanav>
+
+	<div id=disclaimer>I take game-playing very seriously, and I would <i>never</i> cheat at a game.</br>
+	If you, however, have no honor or conscience, have at it!</br></div>
+
+	<h4>
+		<form id='mainpage' method = 'post'>
+		Enter the letters in your rack (use * for a blank): </br>
+		<input type = 'text' name = 'rack' value={{rack}}><span id = error> {{error1}} </span> </br>
+		</br>
+
+		If there is a letter on the board you want to use, you may enter it here. </br>
+		(Note:  only words including this letter will be displayed!) </br>
+
+		<input type = 'text' name = 'board_letter' value={{board_letter}}><span id = error> {{error2}} </span> </br>
+
+		<p>
+			<input type='submit' value='Cheat!'/>
+		</p>
+		</form>
+	</h4>
+	</div>
+	<div id=tagline>Created by <a href="www.github.com/pnichols104">Paul Nichols</a> while a student at <a href="https://www.hackerschool.com/">Hacker School</a></div>
+	</div>
+
