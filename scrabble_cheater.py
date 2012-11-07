@@ -63,6 +63,8 @@ def main_page():
 		error1 = error2 = ""
 		if len(tiles_input) < 2:
 			error1 = "Please enter at least two tiles."
+		elif len(tiles_input) > 7:
+			error1 = "You may only have up to 7 tiles."
 		if len(board_letter) > 1:
 			error2 = "You may only put one board letter here."
 		if error1 or error2:
